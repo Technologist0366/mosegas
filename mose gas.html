@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moseh Gas | 15-Minute LPG Gas Delivery in Nyeri</title>
+<meta name="description" content="Moseh Gas delivers 6kg, 13kg and 50kg LPG refills across Nyeri in 15 minutes. Order on WhatsApp. EPRA licensed, digital scale verified, pay via M-Pesa.">
+<meta name="theme-color" content="#053B22">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mosehgas.s3.us-east-1.amazonaws.com" crossorigin>
+<link rel="preconnect" href="https://aixpart-images.s3.eu-north-1.amazonaws.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --g-50:#EAF9EF; --g-100:#D6F2E0; --g-200:#B9E7C9;
+    --g-500:#12B357; --g-600:#0B7A3B; --g-700:#053B22; --g-900:#032416;
+    --o-400:#FB923C; --o-500:#F97316; --o-600:#EA580C;
+    --ink:#0A1622; --muted:#5B6B7C; --faint:#8B99A8;
+    --bg:#F3F8F4; --card:#FFFFFF; --line:#E1EAE3; --line-2:#D0DFD6;
+    --sh-xs:0 1px 2px rgba(5,59,34,.05);
+    --sh-sm:0 2px 8px rgba(5,59,34,.06), 0 1px 2px rgba(5,59,34,.04);
+    --sh:0 10px 28px rgba(5,59,34,.09), 0 3px 8px rgba(5,59,34,.04);
+    --sh-lg:0 22px 52px rgba(5,59,34,.14), 0 6px 14px rgba(5,59,34,.06);
+    --sh-xl:0 36px 72px rgba(5,59,34,.20);
+    --grad-green:linear-gradient(135deg,#032416 0%,#053B22 25%,#0B7A3B 62%,#12B357 100%);
+    --grad-green-btn:linear-gradient(135deg,#0B7A3B 0%,#12B357 100%);
+    --grad-orange:linear-gradient(135deg,#C2410C 0%,#EA580C 45%,#F97316 100%);
+    --grad-wa:linear-gradient(135deg,#1EBE5C 0%,#25D366 55%,#4ADE80 100%);
+    --r-sm:10px; --r-md:14px; --r-lg:20px; --r-xl:26px; --r-2xl:32px; --r-full:999px;
+    --head-h:128px;
+  }
+  html{scroll-behavior:smooth;font-size:17px}
+  body{
+    font-family:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    background:
+      radial-gradient(1200px 600px at 8% -8%, rgba(18,179,87,.09), transparent 60%),
+      radial-gradient(1000px 500px at 92% 6%, rgba(249,115,22,.06), transparent 60%),
+      var(--bg);
+    color:var(--ink); line-height:1.55; font-size:17px;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    padding-bottom:84px; overflow-x:hidden;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+  section{scroll-margin-top:calc(var(--head-h) + 12px)}
+  ::selection{background:var(--g-200);color:var(--g-700)}
+  svg{display:block}
+
+  /* ================= STICKY HEADER ================= */
+  .site-head{
+    position:sticky;top:0;z-index:70;
+    background:rgba(3,36,22,.88);
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    box-shadow:0 8px 28px rgba(3,36,22,.22);
+  }
+  .topbar{color:#fff;font-size:14.5px}
+  .topbar .wrap{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;justify-content:center;padding:11px 18px 8px}
+  .tb-item{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-weight:700;letter-spacing:-.1px}
+  .tb-item svg{opacity:.85;flex:0 0 auto}
+  .tb-btn{background:none;border:0;font:inherit;cursor:pointer;color:#fff;padding:0}
+  .tb-btn:hover{color:var(--g-200)}
+  .copy-tag{background:rgba(255,255,255,.18);border-radius:var(--r-full);padding:2px 9px;font-size:11.5px;font-weight:800;letter-spacing:.4px;display:inline-flex;align-items:center;gap:4px;transition:background .15s}
+  .tb-btn:hover .copy-tag{background:rgba(255,255,255,.28)}
+  @media(min-width:860px){.topbar .wrap{justify-content:space-between}}
+
+  .subnav{border-top:1px solid rgba(255,255,255,.07);position:relative}
+  .subnav::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(18,179,87,.4),transparent)}
+  .subnav-inner{display:flex;gap:9px;overflow-x:auto;padding:10px 18px 11px;scrollbar-width:none;align-items:center}
+  .subnav-inner::-webkit-scrollbar{display:none}
+  .nav-link{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;color:#E6F5EC;text-decoration:none;font-size:14.5px;font-weight:800;letter-spacing:.1px;border:1.5px solid rgba(255,255,255,.16);border-radius:var(--r-full);padding:9px 17px;white-space:nowrap;transition:all .18s ease;background:rgba(255,255,255,.03)}
+  .nav-link:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.34);transform:translateY(-1px)}
+  .nav-link.active{background:linear-gradient(135deg,#12B357,#25D366);border-color:transparent;color:#032416;box-shadow:0 6px 18px rgba(37,211,102,.4), inset 0 1px 0 rgba(255,255,255,.4)}
+  .nav-link.nav-wa{background:var(--grad-wa);border-color:transparent;color:#032416;box-shadow:0 6px 18px rgba(37,211,102,.32), inset 0 1px 0 rgba(255,255,255,.4)}
+  .nav-link.nav-wa:hover{filter:brightness(1.06);transform:translateY(-1px)}
+  @media(min-width:860px){.subnav-inner{justify-content:center}}
+
+  /* ================= HERO — IMAGE VISIBLE ================= */
+  .hero{position:relative;overflow:hidden;color:#fff;padding:38px 0 40px;isolation:isolate;min-height:340px;display:flex;align-items:center}
+  .hero-bg{
+    position:absolute;inset:0;z-index:0;
+    background-image:url("https://mosehgas.s3.us-east-1.amazonaws.com/mose%20gas/lpg%20gas%20deaaler.jpg");
+    background-size:cover;background-position:center;background-repeat:no-repeat;
+    transform:scale(1.04);animation:heroZoom 22s ease-in-out infinite alternate;
+  }
+  @keyframes heroZoom{0%{transform:scale(1.04)}100%{transform:scale(1.13)}}
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;
+    background:
+      linear-gradient(100deg, rgba(3,36,22,.92) 0%, rgba(5,59,34,.78) 30%, rgba(11,122,59,.42) 60%, rgba(18,179,87,.18) 85%, rgba(18,179,87,.05) 100%);
+  }
+  .hero-overlay::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(900px 500px at 10% 40%, rgba(0,0,0,.35), transparent 70%);
+  }
+  .hero .wrap{position:relative;z-index:2;max-width:1100px;width:100%}
+
+  .hero h1{
+    font-size:clamp(32px,6.4vw,52px);
+    line-height:1.04;
+    letter-spacing:-1.6px;
+    max-width:760px;
+    font-weight:900;
+    text-shadow:0 3px 28px rgba(0,0,0,.55), 0 1px 4px rgba(0,0,0,.4);
+  }
+  .hero h1 .hl{
+    background:linear-gradient(100deg,#FFE49B 0%,#FDBA74 25%,#FFD166 50%,#FFE49B 75%,#FDBA74 100%);
+    background-size:200% auto;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    position:relative;
+    animation:shine 4.5s linear infinite;
+    filter:drop-shadow(0 2px 8px rgba(249,115,22,.35));
+  }
+  @keyframes shine{0%{background-position:0% center}100%{background-position:200% center}}
+
+  .hero .sub{
+    margin-top:14px;
+    font-size:clamp(16px,2.2vw,19px);
+    color:rgba(255,255,255,.96);
+    max-width:580px;
+    font-weight:600;
+    line-height:1.5;
+    text-shadow:0 2px 12px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5);
+  }
+
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+    margin-top:26px;max-width:520px;
+  }
+  .stat{
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:14px;
+    padding:14px 10px;
+    text-align:center;
+    backdrop-filter:blur(16px) saturate(140%);
+    -webkit-backdrop-filter:blur(16px) saturate(140%);
+    transition:transform .2s, background .2s, border-color .2s;
+    box-shadow:0 8px 24px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.25);
+  }
+  .stat:hover{transform:translateY(-3px);background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.45)}
+  .stat b{
+    display:block;
+    font-size:clamp(18px,3vw,24px);
+    font-weight:900;
+    letter-spacing:-.7px;
+    line-height:1.1;
+    background:linear-gradient(180deg,#fff,#B9E7C9);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 1px 2px rgba(0,0,0,.3));
+  }
+  .stat span{
+    display:block;
+    margin-top:4px;
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:.9px;
+    font-weight:800;
+    color:rgba(255,255,255,.9);
+  }
+
+  /* ================= BUTTONS ================= */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:var(--r-full);font-weight:800;font-size:17px;letter-spacing:-.2px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;position:relative;overflow:hidden;isolation:isolate;transition:transform .18s ease, box-shadow .18s ease, filter .18s ease}
+  .btn svg{flex:0 0 auto}
+  .btn::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.22),transparent 55%)}
+  .btn::before{content:"";position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-22deg);transition:left .7s ease;pointer-events:none}
+  .btn:hover::before{left:140%}
+  .btn:active{transform:scale(.97)}
+  .btn:hover{filter:brightness(1.06)}
+  .btn-wa{background:var(--grad-wa);color:#032416;box-shadow:0 12px 28px rgba(37,211,102,.4), inset 0 1px 0 rgba(255,255,255,.5)}
+  .btn-primary{background:var(--grad-orange);color:#fff;box-shadow:0 12px 28px rgba(249,115,22,.4), inset 0 1px 0 rgba(255,255,255,.28)}
+  .btn-block{width:100%}
+
+  /* ================= SECTION HEADS ================= */
+  .sec{padding:42px 0}
+  .sec-head{text-align:center;margin-bottom:26px}
+  .sec-head .eyebrow{display:inline-block;color:var(--g-600);font-weight:900;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;background:var(--g-50);padding:5px 13px;border-radius:var(--r-full);border:1px solid var(--g-200);margin-bottom:10px}
+  .sec-head h2{font-size:clamp(26px,4.6vw,34px);letter-spacing:-1px;font-weight:900;color:var(--ink)}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:16.5px;max-width:560px;margin-left:auto;margin-right:auto}
+
+  /* ================= BRAND CHIPS ================= */
+  .brand-bar{display:flex;gap:10px;overflow-x:auto;padding:3px 2px 16px;margin-bottom:8px;scrollbar-width:none}
+  .brand-bar::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;position:relative;background:#fff;border:1.5px solid var(--line);color:var(--ink);border-radius:var(--r-full);padding:12px 20px 12px 34px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;transition:all .18s ease;white-space:nowrap;box-shadow:var(--sh-xs);letter-spacing:-.1px}
+  .chip::before{content:"";position:absolute;left:14px;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:var(--chip-color, var(--g-500));box-shadow:0 0 0 2px rgba(0,0,0,.04);transition:box-shadow .18s, transform .18s}
+  .chip:hover{border-color:var(--chip-color, var(--g-200));transform:translateY(-1px);box-shadow:0 4px 12px var(--chip-shadow, var(--sh-sm))}
+  .chip.active{
+    background:var(--chip-color, var(--g-500));
+    border-color:transparent;
+    color:#fff;
+    box-shadow:0 8px 22px var(--chip-glow, rgba(18,179,87,.35)), inset 0 1px 0 rgba(255,255,255,.3);
+    transform:translateY(-1px);
+  }
+  .chip.active::before{background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.3);transform:translateY(-50%) scale(1.1)}
+
+  .chip[data-brand="K-Gas"]{--chip-color:#12B357;--chip-glow:rgba(18,179,87,.4);--chip-shadow:rgba(18,179,87,.18)}
+  .chip[data-brand="ProGas"]{--chip-color:#F97316;--chip-glow:rgba(249,115,22,.4);--chip-shadow:rgba(249,115,22,.18)}
+  .chip[data-brand="TotalEnergies"]{--chip-color:#DC2626;--chip-glow:rgba(220,38,38,.4);--chip-shadow:rgba(220,38,38,.18)}
+  .chip[data-brand="AfriGas"]{--chip-color:#2563EB;--chip-glow:rgba(37,99,235,.4);--chip-shadow:rgba(37,99,235,.18)}
+  .chip[data-brand="Rubis"]{--chip-color:#B91C1C;--chip-glow:rgba(185,28,28,.4);--chip-shadow:rgba(185,28,28,.18)}
+  .chip[data-brand="Hashi"]{--chip-color:#7C3AED;--chip-glow:rgba(124,58,237,.4);--chip-shadow:rgba(124,58,237,.18)}
+  .chip[data-brand="Universal Exchange"]{--chip-color:#0891B2;--chip-glow:rgba(8,145,178,.4);--chip-shadow:rgba(8,145,178,.18)}
+
+  /* ================= PRODUCT CARDS ================= */
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:860px){.grid{grid-template-columns:repeat(4,1fr);gap:18px}}
+  .card{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:14px 14px 16px;display:flex;flex-direction:column;gap:7px;position:relative;transition:transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s ease, border-color .25s ease;box-shadow:var(--sh-sm)}
+  .card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(160deg,rgba(18,179,87,.06),transparent 42%);opacity:0;transition:opacity .25s;z-index:0}
+  .card:hover{transform:translateY(-6px);border-color:transparent;box-shadow:0 0 0 1.5px var(--brand-ring, rgba(18,179,87,.35)), 0 22px 48px rgba(5,59,34,.13), 0 4px 12px rgba(5,59,34,.05)}
+  .card:hover::before{opacity:1}
+  .card > *{position:relative;z-index:1}
+
+  .card .tag{position:absolute;top:-12px;right:12px;z-index:3;background:var(--grad-orange);color:#fff;font-size:10.5px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;padding:5px 11px;border-radius:var(--r-full);box-shadow:0 6px 16px rgba(249,115,22,.36), inset 0 1px 0 rgba(255,255,255,.3)}
+
+  .card-img{position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;
+    background:radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.9), transparent 55%),linear-gradient(160deg,var(--g-50),var(--g-100));
+    border:1px solid var(--line);margin-bottom:2px;isolation:isolate}
+  .card-img::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60% 55% at 50% 42%, var(--brand-glow, rgba(18,179,87,.14)), transparent 72%);opacity:.9}
+  .card-img::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 55%,rgba(5,59,34,.10) 100%);z-index:1}
+  .product-img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:0;opacity:0;transition:opacity .45s ease, transform .5s ease;transform:scale(1.03)}
+  .product-img.loaded{opacity:1;transform:scale(1)}
+  .card:hover .product-img.loaded{transform:scale(1.07)}
+  .product-img.hide{display:none}
+
+  .img-fallback{position:absolute;inset:0;z-index:0;display:grid;place-items:center;background:radial-gradient(120% 120% at 30% 20%, rgba(255,255,255,.55), transparent 60%),linear-gradient(150deg,var(--g-100),var(--g-200));color:var(--g-700);opacity:0;transition:opacity .3s ease;padding:14%}
+  .img-fallback svg{width:100%;height:100%;display:block;filter:drop-shadow(0 8px 14px rgba(5,59,34,.18))}
+  .card-img.no-img .img-fallback{opacity:1}
+
+  .img-brand{position:absolute;top:9px;left:9px;z-index:2;background:rgba(255,255,255,.95);color:var(--g-700);font-size:10px;font-weight:900;padding:4px 10px;border-radius:var(--r-full);letter-spacing:.3px;box-shadow:0 2px 8px rgba(0,0,0,.10);backdrop-filter:blur(4px);transition:opacity .25s;display:inline-flex;align-items:center;gap:5px}
+  .img-brand::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brand-dot, var(--g-500));box-shadow:0 0 0 2px rgba(18,179,87,.15)}
+
+  .card-img.loading::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.65) 50%,transparent 70%);background-size:200% 100%;animation:shimmer 1.2s infinite}
+  @keyframes shimmer{0%{background-position:180% 0}100%{background-position:-80% 0}}
+
+  .card h3{font-size:16.5px;letter-spacing:-.4px;font-weight:800;color:var(--ink);margin-top:2px}
+  .card .desc{font-size:12.5px;color:var(--muted);flex:1;line-height:1.45}
+
+  .price{font-size:20px;font-weight:900;color:var(--g-700);letter-spacing:-.8px;margin-top:6px;line-height:1.15;display:inline-flex;flex-direction:column;gap:3px;align-self:flex-start;background:linear-gradient(135deg,var(--g-50),#fff);border:1px solid var(--g-200);border-radius:12px;padding:7px 11px;box-shadow:var(--sh-xs)}
+  .price small{display:block;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:0;line-height:1.3;margin-top:0}
+
+  .card .mini{margin-top:10px;background:var(--grad-green-btn);color:#fff;border:0;border-radius:12px;padding:12px;font-weight:800;font-size:14.5px;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;justify-content:center;gap:7px;transition:filter .15s, transform .15s, box-shadow .15s, gap .2s;box-shadow:0 8px 18px rgba(11,122,59,.24), inset 0 1px 0 rgba(255,255,255,.22);position:relative;overflow:hidden}
+  .card .mini svg{transition:transform .2s ease}
+  .card:hover .mini svg{transform:translateX(3px)}
+  .card .mini::before{content:"";position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transform:skewX(-22deg);transition:left .6s ease}
+  .card:hover .mini::before{left:140%}
+  .card .mini:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .card .mini:active{transform:scale(.97)}
+
+  /* ================= QUICK ORDER ================= */
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r-xl);padding:26px;box-shadow:var(--sh-lg);position:relative;overflow:hidden}
+  .panel::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--grad-green-btn);border-radius:var(--r-xl) var(--r-xl) 0 0}
+  .panel h3{font-size:22px;letter-spacing:-.5px;margin-bottom:5px;font-weight:900;color:var(--ink)}
+  .panel .hint{font-size:15px;color:var(--muted);margin-bottom:20px}
+  .row3{display:grid;gap:14px}
+  @media(min-width:720px){.row3{grid-template-columns:1fr 1fr 1fr}}
+  .field{margin-bottom:13px;display:flex;flex-direction:column;gap:7px}
+  .field label{font-size:12.5px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.8px}
+  input[type=text],input[type=tel],select{width:100%;padding:15px 15px;border:1.5px solid var(--line);border-radius:13px;font-size:17px;font-family:inherit;color:var(--ink);background:#FBFDFB;transition:border-color .15s, box-shadow .15s, background .15s;appearance:none;-webkit-appearance:none}
+  select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235B6B7C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");background-repeat:no-repeat;background-position:right 16px center;padding-right:42px}
+  input:focus,select:focus{outline:none;border-color:var(--g-500);background:#fff;box-shadow:0 0 0 4px rgba(18,179,87,.14)}
+
+  /* ================= TILL + ZONES ================= */
+  .info-grid{display:grid;gap:20px}
+  @media(min-width:800px){.info-grid{grid-template-columns:1fr 1fr;align-items:start}}
+  .till-box{background:var(--grad-green);color:#fff;border-radius:var(--r-xl);padding:26px;position:relative;overflow:hidden;box-shadow:var(--sh-xl), inset 0 1px 0 rgba(255,255,255,.18);isolation:isolate}
+  .till-box::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,.35),transparent 70%);top:-110px;right:-80px;filter:blur(30px)}
+  .till-box::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);background-size:32px 32px;opacity:.5}
+  .till-box > *{position:relative;z-index:1}
+  .till-box .lbl{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;opacity:.88;font-weight:900;display:flex;align-items:center;gap:8px}
+  .till-box .lbl .chip-dot{width:9px;height:9px;border-radius:50%;background:#7DEBA8;box-shadow:0 0 0 3px rgba(125,235,168,.25)}
+  .till-num{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:42px;font-weight:800;letter-spacing:3px;margin:10px 0 6px;line-height:1;background:linear-gradient(100deg,#fff,#B9E7C9 60%,#fff);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+  .till-box p{font-size:14.5px;opacity:.9;margin-bottom:18px}
+  .copy-btn{width:100%;background:#fff;color:var(--g-700);border:0;border-radius:13px;padding:16px;font-weight:900;font-size:16px;cursor:pointer;font-family:inherit;transition:transform .15s, box-shadow .15s;box-shadow:0 10px 24px rgba(0,0,0,.2), inset 0 -2px 0 rgba(5,59,34,.08);display:inline-flex;align-items:center;justify-content:center;gap:9px}
+  .copy-btn:hover{box-shadow:0 14px 30px rgba(0,0,0,.26), inset 0 -2px 0 rgba(5,59,34,.08)}
+  .copy-btn:active{transform:scale(.98)}
+
+  .zones{list-style:none;display:grid;gap:8px}
+  .zone{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px 16px;font-size:15.5px;box-shadow:var(--sh-xs);transition:transform .15s, border-color .15s, box-shadow .15s}
+  .zone:hover{transform:translateX(3px);border-color:var(--g-200);box-shadow:var(--sh-sm)}
+  .zone b{font-weight:800;letter-spacing:-.2px;color:var(--ink);display:flex;align-items:center;gap:10px}
+  .zone b::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--g-500);box-shadow:0 0 0 3px rgba(18,179,87,.18);flex:0 0 auto}
+  .zone em{font-style:normal;font-size:12.5px;font-weight:900;padding:5px 12px;border-radius:var(--r-full);background:var(--g-50);color:var(--g-700);white-space:nowrap;border:1px solid var(--g-200)}
+  .zone em.bulk{background:#FFF3EA;color:#B45309;border-color:#FED7AA}
+  .zone.bulk-row b::before{background:var(--o-500);box-shadow:0 0 0 3px rgba(249,115,22,.18)}
+
+  .zone:first-child{background:linear-gradient(135deg,#fff,var(--g-50));border-color:var(--g-200)}
+  .zone:first-child em{background:var(--grad-green-btn);color:#fff;border-color:transparent;box-shadow:0 4px 12px rgba(11,122,59,.28)}
+  .zone:first-child b::before{animation:zonePulse 1.8s ease-out infinite}
+  @keyframes zonePulse{0%{box-shadow:0 0 0 0 rgba(18,179,87,.5)}70%{box-shadow:0 0 0 8px rgba(18,179,87,0)}100%{box-shadow:0 0 0 0 rgba(18,179,87,0)}}
+
+  /* ================= FOOTER ================= */
+  footer{background:var(--grad-green);color:#fff;padding:36px 0 30px;margin-top:26px;position:relative;overflow:hidden;isolation:isolate}
+  footer::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(18,179,87,.3),transparent 70%);filter:blur(50px);bottom:-220px;right:-120px;z-index:0}
+  .foot-grid{display:grid;gap:26px;position:relative;z-index:2;grid-template-columns:1fr}
+  @media(min-width:760px){.foot-grid{grid-template-columns:1.1fr 1fr 1fr;text-align:left}}
+  .foot-col h5{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;opacity:.75;font-weight:900}
+  footer p,footer a,footer li{font-size:15px;color:rgba(255,255,255,.84);text-decoration:none;line-height:1.65}
+  footer ul{list-style:none;display:grid;gap:8px}
+  footer a:hover{color:#fff;text-decoration:underline}
+  .foot-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;position:relative;z-index:2}
+  .foot-badges span{font-size:13px;font-weight:800;padding:7px 14px;border-radius:var(--r-full);background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);color:#E6F5EC;display:inline-flex;align-items:center;gap:7px}
+  .foot-badges span svg{color:#7DEBA8}
+  .foot-note{border-top:1px solid rgba(255,255,255,.14);margin-top:28px;padding-top:18px;font-size:13px;text-align:center;opacity:.7;position:relative;z-index:2}
+  .brand-name{font-size:18px;font-weight:900;color:#fff;margin-bottom:8px;display:inline-flex;align-items:center;gap:8px}
+  .brand-name .mark{width:26px;height:26px;border-radius:8px;background:var(--grad-wa);display:grid;place-items:center;color:#032416;font-size:13px;font-weight:900;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+
+  /* ================= MOBILE BAR ================= */
+  .mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:90;background:rgba(3,36,22,.94);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-top:1px solid rgba(255,255,255,.13);padding:10px 13px 13px;display:flex;gap:10px;align-items:center;box-shadow:0 -10px 30px rgba(3,36,22,.35)}
+  .mobile-bar .btn{flex:1;padding:14px 10px;font-size:16px;border-radius:13px}
+  .mobile-bar .mb-info{flex:0 0 auto;text-align:center;color:#fff;line-height:1.2;padding-right:4px}
+  .mobile-bar .mb-info b{display:block;font-size:15px;font-weight:900;letter-spacing:-.4px;background:linear-gradient(180deg,#fff,#7DEBA8);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .mobile-bar .mb-info span{font-size:10px;text-transform:uppercase;letter-spacing:.8px;opacity:.75;font-weight:800}
+  @media(min-width:920px){.mobile-bar{display:none} body{padding-bottom:0}}
+
+  /* ================= FLOATING WA ================= */
+  .fab{position:fixed;right:20px;bottom:20px;z-index:80;background:var(--grad-wa);color:#032416;border-radius:var(--r-full);padding:15px 22px;font-weight:900;font-size:16px;text-decoration:none;box-shadow:0 16px 36px rgba(37,211,102,.5), inset 0 1px 0 rgba(255,255,255,.5);display:none;gap:9px;align-items:center;transition:transform .18s ease, box-shadow .18s ease}
+  .fab:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 20px 44px rgba(37,211,102,.6), inset 0 1px 0 rgba(255,255,255,.5)}
+  @media(min-width:920px){.fab{display:inline-flex}}
+
+  /* ================= AIXA ASSISTANT ================= */
+  .aixa-launcher{position:fixed;left:20px;bottom:20px;z-index:95;width:66px;height:66px;border-radius:50%;border:0;padding:0;cursor:pointer;font-family:inherit;background:linear-gradient(135deg,#0B7A3B,#12B357);box-shadow:0 14px 34px rgba(11,122,59,.42), 0 0 0 6px rgba(18,179,87,.14), inset 0 1px 0 rgba(255,255,255,.4);display:grid;place-items:center;transition:transform .2s ease, box-shadow .2s ease;overflow:visible}
+  .aixa-launcher:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 20px 44px rgba(11,122,59,.5), 0 0 0 8px rgba(18,179,87,.16), inset 0 1px 0 rgba(255,255,255,.4)}
+  .aixa-launcher:active{transform:scale(.96)}
+  .aixa-launcher::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(18,179,87,.35);animation:aixaPulse 2.4s ease-out infinite;pointer-events:none}
+  @keyframes aixaPulse{0%{transform:scale(.9);opacity:1}100%{transform:scale(1.5);opacity:0}}
+  .aixa-launcher .aixa-img{width:58px;height:58px;border-radius:50%;object-fit:cover;display:block;border:2px solid rgba(255,255,255,.9);background:linear-gradient(150deg,#053B22,#0B7A3B);position:relative;z-index:1}
+  .aixa-launcher .aixa-fallback{position:absolute;inset:0;display:none;place-items:center;border-radius:50%;color:#fff;font-weight:900;font-size:24px;letter-spacing:-1px;background:linear-gradient(150deg,#053B22,#0B7A3B);border:2px solid rgba(255,255,255,.9);z-index:1}
+  .aixa-launcher.no-img .aixa-img{display:none}
+  .aixa-launcher.no-img .aixa-fallback{display:grid}
+  .aixa-badge{position:absolute;bottom:2px;right:2px;width:16px;height:16px;border-radius:50%;background:#34D399;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.25);z-index:2}
+
+  .aixa-panel{position:fixed;left:20px;bottom:98px;z-index:96;width:min(360px, calc(100vw - 40px));max-height:min(560px, calc(100vh - 140px));background:#fff;border-radius:22px;border:1px solid var(--line);box-shadow:0 30px 70px rgba(5,59,34,.28), 0 8px 20px rgba(5,59,34,.12);display:flex;flex-direction:column;overflow:hidden;transform-origin:bottom left;transform:translateY(16px) scale(.92);opacity:0;pointer-events:none;transition:transform .28s cubic-bezier(.2,.7,.3,1), opacity .22s ease}
+  .aixa-panel.open{transform:none;opacity:1;pointer-events:auto}
+  .aixa-head{background:linear-gradient(135deg,#053B22,#0B7A3B);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px;position:relative;overflow:hidden}
+  .aixa-head::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%, rgba(249,115,22,.32), transparent 55%);pointer-events:none}
+  .aixa-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.55);background:rgba(255,255,255,.2);flex:0 0 auto;position:relative;z-index:1;display:grid;place-items:center}
+  .aixa-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .aixa-avatar .aixa-fallback{position:absolute;inset:0;display:none;place-items:center;color:#fff;font-weight:900;font-size:18px;background:linear-gradient(150deg,#053B22,#0B7A3B)}
+  .aixa-avatar.no-img img{display:none}
+  .aixa-avatar.no-img .aixa-fallback{display:grid}
+  .aixa-meta{flex:1;position:relative;z-index:1}
+  .aixa-name{font-weight:900;font-size:16px;letter-spacing:-.3px;line-height:1.2}
+  .aixa-status{font-size:11.5px;opacity:.88;font-weight:700;display:flex;align-items:center;gap:6px;margin-top:3px}
+  .aixa-status .dot{width:7px;height:7px;border-radius:50%;background:#34D399;box-shadow:0 0 0 3px rgba(52,211,153,.25)}
+  .aixa-close{background:rgba(255,255,255,.14);border:0;color:#fff;cursor:pointer;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;transition:background .15s;position:relative;z-index:1;font-family:inherit}
+  .aixa-close:hover{background:rgba(255,255,255,.24)}
+
+  .aixa-body{flex:1;overflow-y:auto;padding:16px 16px 12px;background:#F7FAF8;display:flex;flex-direction:column;gap:10px}
+  .aixa-msg{background:#fff;border:1px solid var(--line);border-radius:14px 14px 14px 4px;padding:12px 14px;font-size:14px;line-height:1.55;color:var(--ink);box-shadow:var(--sh-xs);max-width:94%}
+  .aixa-msg b{color:var(--g-700);font-weight:900}
+
+  .aixa-quick{display:grid;gap:7px;margin-top:2px}
+  .aixa-quick a,.aixa-quick button{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;font-weight:800;color:var(--ink);cursor:pointer;font-family:inherit;text-align:left;text-decoration:none;display:flex;align-items:center;gap:10px;transition:all .15s;box-shadow:var(--sh-xs)}
+  .aixa-quick a:hover,.aixa-quick button:hover{border-color:var(--g-200);background:var(--g-50);transform:translateX(2px)}
+  .aixa-quick .ico{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--g-50);color:var(--g-700);flex:0 0 auto}
+  .aixa-quick .ico.wa{background:rgba(37,211,102,.14);color:#128C4A}
+  .aixa-quick .ico.o{background:#FFF3EA;color:#B45309}
+  .aixa-quick .arrow{margin-left:auto;opacity:.4;flex:0 0 auto}
+
+  .aixa-foot{border-top:1px solid var(--line);padding:10px;background:#fff;display:flex;gap:8px;align-items:center}
+  .aixa-foot input{flex:1;min-width:0;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;font-size:15px;font-family:inherit;background:#FBFDFB;color:var(--ink);transition:border-color .15s, box-shadow .15s}
+  .aixa-foot input:focus{outline:none;border-color:var(--g-500);background:#fff;box-shadow:0 0 0 3px rgba(18,179,87,.14)}
+  .aixa-foot button{background:var(--grad-wa);color:#032416;border:0;border-radius:12px;width:44px;height:44px;display:grid;place-items:center;cursor:pointer;font-family:inherit;box-shadow:0 6px 14px rgba(37,211,102,.3);transition:transform .15s, filter .15s}
+  .aixa-foot button:hover{filter:brightness(1.08)}
+  .aixa-foot button:active{transform:scale(.95)}
+
+  @media (max-width:920px){
+    .aixa-launcher{left:14px;bottom:90px;width:60px;height:60px}
+    .aixa-launcher .aixa-img{width:52px;height:52px}
+    .aixa-panel{left:14px;right:14px;bottom:160px;width:auto;max-height:calc(100vh - 240px)}
+  }
+
+  /* ================= TOAST ================= */
+  .toast{position:fixed;left:50%;bottom:100px;transform:translateX(-50%) translateY(24px);background:var(--ink);color:#fff;padding:14px 24px;border-radius:var(--r-full);font-size:14.5px;font-weight:700;opacity:0;pointer-events:none;transition:all .3s cubic-bezier(.2,.7,.3,1);z-index:120;box-shadow:0 18px 40px rgba(0,0,0,.3);max-width:90vw;text-align:center;display:inline-flex;align-items:center;gap:9px}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @media(min-width:920px){.toast{bottom:30px}}
+
+  /* ================= REVEAL ================= */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= STICKY HEADER ================= -->
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a class="tb-item" href="tel:+254712345678">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0712 345 678
+      </a>
+      <button class="tb-item tb-btn js-copy-till">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Till: <b>5123456</b>
+        <span class="copy-tag">Copy</span>
+      </button>
+      <span class="tb-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        6:30 AM – 9:30 PM
+      </span>
+    </div>
+  </div>
+
+  <nav class="subnav" aria-label="Quick navigation">
+    <div class="wrap subnav-inner">
+      <a class="nav-link active" data-nav="prices" href="#prices">Gas &amp; Prices</a>
+      <a class="nav-link" data-nav="order" href="#order">Quick Order</a>
+      <a class="nav-link" data-nav="pay" href="#pay">Till &amp; Zones</a>
+      <a class="nav-link nav-wa" id="navWa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1>Moseh Gas — <span class="hl">15 Minute</span> Gas Delivery in Nyeri</h1>
+    <p class="sub">Order on WhatsApp. Weighed at your door, paid via M-Pesa.</p>
+
+    <div class="hero-stats">
+      <div class="stat"><b>15 min</b><span>Avg. delivery</span></div>
+      <div class="stat"><b>4.9 / 5</b><span>Rating</span></div>
+      <div class="stat"><b>2,400+</b><span>Refills</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GAS SIZES + PRICES ================= -->
+<section class="sec reveal" id="prices">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Live Prices</span>
+      <h2>Choose Your Gas</h2>
+      <p>Prices and photos update live when you switch brands below.</p>
+    </div>
+
+    <div class="brand-bar" id="brandBar">
+      <button class="chip active" data-brand="K-Gas">K-Gas</button>
+      <button class="chip" data-brand="ProGas">ProGas</button>
+      <button class="chip" data-brand="TotalEnergies">TotalEnergies</button>
+      <button class="chip" data-brand="AfriGas">AfriGas</button>
+      <button class="chip" data-brand="Rubis">Rubis</button>
+      <button class="chip" data-brand="Hashi">Hashi</button>
+      <button class="chip" data-brand="Universal Exchange">Universal Exchange</button>
+    </div>
+
+    <div class="grid" id="productGrid">
+
+      <article class="card" data-size="6kg" style="--brand-ring:rgba(18,179,87,.35);--brand-glow:rgba(18,179,87,.16);--brand-dot:#12B357">
+        <div class="tag">Popular</div>
+        <div class="card-img" id="imgWrap-6kg">
+          <span class="img-brand" data-brand-label="6kg">K-Gas</span>
+          <img class="product-img" data-img-for="6kg" alt="6kg gas refill" loading="lazy" decoding="async">
+          <div class="img-fallback" aria-hidden="true"></div>
+        </div>
+        <h3>6kg Refill</h3>
+        <p class="desc">1–2 people</p>
+        <div class="price" data-price-for="6kg">KES 1,080<small>Weighed at your door</small></div>
+        <button class="mini js-order" data-size="6kg Refill">
+          Order
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </article>
+
+      <article class="card" data-size="13kg" style="--brand-ring:rgba(18,179,87,.35);--brand-glow:rgba(18,179,87,.16);--brand-dot:#12B357">
+        <div class="card-img" id="imgWrap-13kg">
+          <span class="img-brand" data-brand-label="13kg">K-Gas</span>
+          <img class="product-img" data-img-for="13kg" alt="13kg gas refill" loading="lazy" decoding="async">
+          <div class="img-fallback" aria-hidden="true"></div>
+        </div>
+        <h3>13kg Refill</h3>
+        <p class="desc">3–6 people</p>
+        <div class="price" data-price-for="13kg">KES 2,450<small>Weighed at your door</small></div>
+        <button class="mini js-order" data-size="13kg Refill">
+          Order
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </article>
+
+      <article class="card" data-size="50kg" style="--brand-ring:rgba(249,115,22,.35);--brand-glow:rgba(249,115,22,.16);--brand-dot:#F97316">
+        <div class="card-img" id="imgWrap-50kg">
+          <span class="img-brand" data-brand-label="50kg">K-Gas</span>
+          <img class="product-img" data-img-for="50kg" alt="50kg commercial gas cylinder" loading="lazy" decoding="async">
+          <div class="img-fallback" aria-hidden="true"></div>
+        </div>
+        <h3>50kg Commercial</h3>
+        <p class="desc">Hotels &amp; business</p>
+        <div class="price" data-price-for="50kg">KES 9,500<small>Bulk pricing available</small></div>
+        <button class="mini js-order" data-size="50kg Commercial">
+          Order
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </article>
+
+      <article class="card" data-size="accessories" style="--brand-ring:rgba(8,145,178,.35);--brand-glow:rgba(8,145,178,.14);--brand-dot:#0891B2">
+        <div class="card-img" id="imgWrap-accessories">
+          <span class="img-brand" data-brand-label="accessories">K-Gas</span>
+          <img class="product-img" data-img-for="accessories" alt="Gas accessories" loading="lazy" decoding="async">
+          <div class="img-fallback" aria-hidden="true"></div>
+        </div>
+        <h3>Accessories</h3>
+        <p class="desc">Regulators &amp; hoses</p>
+        <div class="price" data-price-for="accessories">From KES 650<small>Genuine EPRA parts</small></div>
+        <button class="mini js-order" data-size="Cylinder / Accessories">
+          Enquire
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUICK ORDER ================= -->
+<section class="sec reveal" id="order" style="padding-top:0">
+  <div class="wrap">
+    <div class="panel">
+      <h3>Quick Order</h3>
+      <p class="hint">3 fields. We reply on WhatsApp with your rider ETA.</p>
+
+      <form id="quickForm">
+        <div class="row3">
+          <div class="field">
+            <label for="fSize">Size</label>
+            <select id="fSize" required>
+              <option>6kg Refill</option>
+              <option>13kg Refill</option>
+              <option>50kg Commercial</option>
+              <option>Cylinder / Accessories</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fEstate">Estate</label>
+            <select id="fEstate" required>
+              <option value="">Select…</option>
+              <option>Nyeri Town</option>
+              <option>Kamakwa</option>
+              <option>King'ong'o</option>
+              <option>Skuta</option>
+              <option>Ruring'u</option>
+              <option>Karatina</option>
+              <option>Othaya</option>
+              <option>Mweiga</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fPhone">Phone</label>
+            <input type="tel" id="fPhone" placeholder="07XX XXX XXX" inputmode="tel" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-wa btn-block" style="margin-top:8px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01a7.94 7.94 0 0 0 5.55-13.56zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.59 6.59 0 1 1 12.25-3.48 6.6 6.6 0 0 1-6.65 6.58zm3.62-4.94c-.2-.1-1.17-.58-1.35-.65-.18-.07-.32-.1-.45.1s-.51.64-.63.78c-.12.13-.23.15-.43.05a5.38 5.38 0 0 1-1.59-.98 5.94 5.94 0 0 1-1.1-1.37c-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.34.06-.14.03-.26-.02-.36-.05-.1-.45-1.08-.61-1.48-.16-.39-.32-.34-.45-.34l-.38-.01a.74.74 0 0 0-.53.25 2.22 2.22 0 0 0-.69 1.65c0 .97.7 1.9.8 2.04.1.13 1.39 2.12 3.36 2.97.47.2.83.32 1.12.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.34-.94.17-.47.17-.86.12-.94-.05-.09-.18-.14-.38-.25z"/></svg>
+          Send Order on WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TILL + ZONES ================= -->
+<section class="sec reveal" id="pay" style="padding-top:0">
+  <div class="wrap">
+    <div class="info-grid">
+
+      <div class="till-box">
+        <div class="lbl"><span class="chip-dot"></span> Pay via M-Pesa · Buy Goods</div>
+        <div class="till-num" id="tillNumber">5123456</div>
+        <p>Moseh Gas · No extra charges</p>
+        <button class="copy-btn js-copy-till">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy Till Number
+        </button>
+      </div>
+
+      <ul class="zones">
+        <li class="zone"><b>Nyeri Town</b> <em>10–15 mins</em></li>
+        <li class="zone"><b>Kamakwa</b> <em>10–15 mins</em></li>
+        <li class="zone"><b>King'ong'o</b> <em>12–18 mins</em></li>
+        <li class="zone"><b>Skuta</b> <em>15–20 mins</em></li>
+        <li class="zone"><b>Ruring'u</b> <em>15–20 mins</em></li>
+        <li class="zone bulk-row"><b>Karatina · Othaya · Mweiga</b> <em class="bulk">Scheduled</em></li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-badges">
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        EPRA Licensed
+      </span>
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M3 21h18"/><path d="M7 7h10"/><path d="M12 7l-3 5h6l-3 5"/></svg>
+        Digital Scale Verified
+      </span>
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        Free Delivery
+      </span>
+    </div>
+
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="brand-name"><span class="mark">M</span> Moseh Gas</div>
+        <p>EPRA licensed LPG delivery across Nyeri.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+254712345678">Call 0712 345 678</a></li>
+          <li><a id="footWa" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
+          <li>6:30 AM – 9:30 PM Daily</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Depot &amp; Payment</h5>
+        <ul>
+          <li><a href="https://maps.google.com/?q=Nyeri+Town+Kenya" target="_blank" rel="noopener">Depot on Google Maps</a></li>
+          <li>M-Pesa Till: <b>5123456</b></li>
+          <li>Always check the safety seal before use.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-note">© <span id="year"></span> Moseh Gas · Prices subject to change.</div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE BAR ================= -->
+<div class="mobile-bar">
+  <div class="mb-info">
+    <b>15 min</b>
+    <span>Delivery</span>
+  </div>
+  <a class="btn btn-wa" id="barWa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn-primary" href="#prices">Order</a>
+</div>
+
+<!-- ================= AIXA ASSISTANT ================= -->
+<button class="aixa-launcher" id="aixaLauncher" aria-label="Open Aixa Assistant" aria-expanded="false" aria-controls="aixaPanel">
+  <img class="aixa-img" src="https://aixpart-images.s3.eu-north-1.amazonaws.com/aixaAssistant.webp" alt="" loading="lazy" decoding="async">
+  <span class="aixa-fallback" aria-hidden="true">A</span>
+  <span class="aixa-badge" aria-hidden="true"></span>
+</button>
+
+<div class="aixa-panel" id="aixaPanel" role="dialog" aria-label="Aixa Assistant">
+  <div class="aixa-head">
+    <div class="aixa-avatar">
+      <img src="https://aixpart-images.s3.eu-north-1.amazonaws.com/aixaAssistant.webp" alt="" loading="lazy" decoding="async">
+      <span class="aixa-fallback" aria-hidden="true">A</span>
+    </div>
+    <div class="aixa-meta">
+      <div class="aixa-name">Aixa Assistant</div>
+      <div class="aixa-status"><span class="dot"></span> Online · replies instantly</div>
+    </div>
+    <button class="aixa-close" id="aixaClose" aria-label="Close chat">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <div class="aixa-body">
+    <div class="aixa-msg">
+      Hi, I'm <b>Aixa</b> from Moseh Gas. What do you need today?
+    </div>
+
+    <div class="aixa-quick">
+      <a id="aixaPrices" href="#prices">
+        <span class="ico">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </span>
+        See gas prices
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+
+      <a id="aixaOrder" href="#" target="_blank" rel="noopener">
+        <span class="ico wa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01a7.94 7.94 0 0 0 5.55-13.56z"/></svg>
+        </span>
+        Place a gas order
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+
+      <a id="aixaBulk" href="#" target="_blank" rel="noopener">
+        <span class="ico o">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg>
+        </span>
+        Bulk / business quote
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+
+      <a id="aixaHuman" href="#" target="_blank" rel="noopener">
+        <span class="ico wa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </span>
+        Talk to a person
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="aixa-foot">
+    <input type="text" id="aixaInput" placeholder="Type your question…" aria-label="Ask Aixa a question">
+    <button id="aixaSend" aria-label="Send question on WhatsApp">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<a class="fab" id="fabWa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+<div class="toast" id="toast">Copied!</div>
+
+<script>
+/* =========================================================
+   EDIT THIS BLOCK ONLY
+   ========================================================= */
+const CFG = {
+  business : "Moseh Gas",
+  whatsapp : "254712345678",
+  till     : "5123456",
+
+  prices : { "6kg": 1080, "13kg": 2450, "50kg": 9500 },
+
+  brandDelta : {
+    "K-Gas": 0, "ProGas": 0, "TotalEnergies": 70, "AfriGas": 0,
+    "Rubis": 50, "Hashi": 0, "Universal Exchange": 0
+  }
+};
+
+const S3_BASE = "https://mosehgas.s3.us-east-1.amazonaws.com/mose%20gas/";
+
+function svgCylinder(bg1, bg2, label) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="${bg2}"/>
+        <stop offset=".35" stop-color="${bg1}"/>
+        <stop offset=".7" stop-color="${bg1}"/>
+        <stop offset="1" stop-color="${bg2}"/>
+      </linearGradient>
+      <linearGradient id="top" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="${bg1}"/>
+        <stop offset="1" stop-color="${bg2}"/>
+      </linearGradient>
+      <radialGradient id="hi" cx=".3" cy=".2" r=".8">
+        <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+        <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <ellipse cx="100" cy="178" rx="52" ry="7" fill="#053B22" opacity=".18"/>
+    <rect x="62" y="46" width="76" height="122" rx="12" fill="url(#g)"/>
+    <rect x="62" y="46" width="76" height="122" rx="12" fill="url(#hi)"/>
+    <ellipse cx="100" cy="46" rx="38" ry="8" fill="url(#top)"/>
+    <ellipse cx="100" cy="168" rx="38" ry="7" fill="${bg2}" opacity=".85"/>
+    <rect x="92" y="30" width="16" height="18" rx="2" fill="#053B22"/>
+    <rect x="98" y="22" width="4" height="10" rx="1" fill="#053B22"/>
+    <circle cx="100" cy="30" r="2.4" fill="${bg1}"/>
+    <text x="100" y="118" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="900" fill="#fff" letter-spacing="1" opacity=".95">${label}</text>
+  </svg>`;
+  return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+}
+function svgAccessories(bg1, bg2, label) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <defs>
+      <radialGradient id="rg" cx=".35" cy=".3" r=".8">
+        <stop offset="0" stop-color="${bg1}"/>
+        <stop offset="1" stop-color="${bg2}"/>
+      </radialGradient>
+      <radialGradient id="hi" cx=".35" cy=".25" r=".7">
+        <stop offset="0" stop-color="#fff" stop-opacity=".5"/>
+        <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <circle cx="100" cy="95" r="62" fill="url(#rg)"/>
+    <circle cx="100" cy="95" r="62" fill="url(#hi)"/>
+    <circle cx="100" cy="95" r="30" fill="#EAF9EF"/>
+    <circle cx="100" cy="95" r="30" fill="none" stroke="${bg2}" stroke-width="2"/>
+    <circle cx="100" cy="95" r="12" fill="${bg2}"/>
+    <rect x="94" y="18" width="12" height="20" rx="3" fill="${bg2}"/>
+    <text x="100" y="180" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="900" fill="#053B22" letter-spacing="1.5">${label}</text>
+  </svg>`;
+  return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+}
+
+const FALLBACK_IMAGES = {
+  "K-Gas": {
+    "6kg":         svgCylinder("#0B7A3B", "#053B22", "K"),
+    "13kg":        svgCylinder("#0B7A3B", "#053B22", "K"),
+    "50kg":        svgCylinder("#0B7A3B", "#053B22", "K"),
+    "accessories": svgAccessories("#0B7A3B", "#053B22", "K-GAS")
+  },
+  "ProGas": {
+    "6kg":         svgCylinder("#EA580C", "#9A3412", "P"),
+    "13kg":        svgCylinder("#EA580C", "#9A3412", "P"),
+    "50kg":        svgCylinder("#EA580C", "#9A3412", "P"),
+    "accessories": svgAccessories("#EA580C", "#9A3412", "PROGAS")
+  },
+  "TotalEnergies": {
+    "6kg":         svgCylinder("#DC2626", "#7F1D1D", "T"),
+    "13kg":        svgCylinder("#DC2626", "#7F1D1D", "T"),
+    "50kg":        svgCylinder("#DC2626", "#7F1D1D", "T"),
+    "accessories": svgAccessories("#DC2626", "#7F1D1D", "TOTAL")
+  },
+  "AfriGas": {
+    "6kg":         svgCylinder("#2563EB", "#1E3A8A", "A"),
+    "13kg":        svgCylinder("#2563EB", "#1E3A8A", "A"),
+    "50kg":        svgCylinder("#2563EB", "#1E3A8A", "A"),
+    "accessories": svgAccessories("#2563EB", "#1E3A8A", "AFRIGAS")
+  },
+  "Rubis": {
+    "6kg":         svgCylinder("#B91C1C", "#450A0A", "R"),
+    "13kg":        svgCylinder("#B91C1C", "#450A0A", "R"),
+    "50kg":        svgCylinder("#B91C1C", "#450A0A", "R"),
+    "accessories": svgAccessories("#B91C1C", "#450A0A", "RUBIS")
+  },
+  "Hashi": {
+    "6kg":         svgCylinder("#7C3AED", "#4C1D95", "H"),
+    "13kg":        svgCylinder("#7C3AED", "#4C1D95", "H"),
+    "50kg":        svgCylinder("#7C3AED", "#4C1D95", "H"),
+    "accessories": svgAccessories("#7C3AED", "#4C1D95", "HASHI")
+  },
+  "Universal Exchange": {
+    "6kg":         svgCylinder("#0891B2", "#164E63", "U"),
+    "13kg":        svgCylinder("#0891B2", "#164E63", "U"),
+    "50kg":        svgCylinder("#0891B2", "#164E63", "U"),
+    "accessories": svgAccessories("#0891B2", "#164E63", "UNIVERSAL")
+  }
+};
+
+const BRAND_IMAGES = {
+  "K-Gas": {
+    "6kg"        : S3_BASE + "Kgas/6kg%20Refill.jpg",
+    "13kg"       : S3_BASE + "Kgas/13kg%20Refill.jpg",
+    "50kg"       : S3_BASE + "50kg%20Commercial.jpg",
+    "accessories": null
+  },
+  "Universal Exchange": null,
+
+  "ProGas": {
+    "6kg"        : S3_BASE + "pro/6kg%20Refill.jpg",
+    "13kg"       : S3_BASE + "pro/13kg%20Refill.jpg",
+    "50kg"       : S3_BASE + "pro/50kg%20Commercial.jpg",
+    "accessories": S3_BASE + "pro/Accessories.jpg"
+  },
+  "TotalEnergies": {
+    "6kg"        : S3_BASE + "TotalEnergies/6kg%20Refill.jpg",
+    "13kg"       : S3_BASE + "TotalEnergies/13kg%20Refill.jpg",
+    "50kg"       : S3_BASE + "TotalEnergies/50kg%20Commercial%20TotalEnergies.webp",
+    "accessories": null
+  },
+  "AfriGas": {
+    "6kg"        : S3_BASE + "Afrigas/6kg%20Refill.jpg",
+    "13kg"       : S3_BASE + "Afrigas/13kg%20Refill.png",
+    "50kg"       : S3_BASE + "Afrigas/50kg%20Commercial.webp",
+    "accessories": null
+  },
+  "Rubis": {
+    "6kg"        : S3_BASE + "Rubis/6kg%20Commercial.jpg",
+    "13kg"       : S3_BASE + "Rubis/13kg%20Commercial.jpg",
+    "50kg"       : S3_BASE + "Rubis/50kg%20Commercial.png",
+    "accessories": null
+  },
+  "Hashi": {
+    "6kg"        : S3_BASE + "Hashi/6kg%20Refill.jpg",
+    "13kg"       : S3_BASE + "Hashi/13kg%20Refill.jpg",
+    "50kg"       : S3_BASE + "Hashi/50kg%20Commercial.jpg",
+    "accessories": null
+  }
+};
+
+const AIXA_AVATAR = "https://aixpart-images.s3.eu-north-1.amazonaws.com/aixaAssistant.webp";
+/* ===================== END OF EDIT BLOCK ===================== */
+
+const $  = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const kes = n => "KES " + n.toLocaleString("en-KE");
+
+let selectedBrand = "K-Gas";
+
+let toastTimer;
+function toast(msg) {
+  const t = $("#toast");
+  t.innerHTML =
+    '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
+    msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 2200);
+}
+
+function copyTill() {
+  const done = () => toast("Till " + CFG.till + " copied");
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(CFG.till).then(done).catch(done);
+  } else {
+    const ta = document.createElement("textarea");
+    ta.value = CFG.till;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+    done();
+  }
+}
+$$(".js-copy-till").forEach(b => b.addEventListener("click", copyTill));
+
+function updatePrices() {
+  const delta = CFG.brandDelta[selectedBrand] || 0;
+  $$("[data-price-for]").forEach(el => {
+    const key = el.dataset.priceFor;
+    if (key === "accessories") return;
+    const base = CFG.prices[key];
+    if (base == null) return;
+    const note = delta > 0 ? "incl. " + selectedBrand : selectedBrand;
+    el.innerHTML = kes(base + delta) + "<small>" + note + " · weighed at your door</small>";
+  });
+}
+
+$$("#brandBar .chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    $$("#brandBar .chip").forEach(c => c.classList.remove("active"));
+    chip.classList.add("active");
+    selectedBrand = chip.dataset.brand;
+    updatePrices();
+    updateImages();
+  });
+});
+
+const SIZE_KEYS = ["6kg", "13kg", "50kg", "accessories"];
+
+function setImageForSize(sizeKey, primaryUrl, fallbackUrl) {
+  const img     = document.querySelector(`[data-img-for="${sizeKey}"]`);
+  const wrapper = document.getElementById("imgWrap-" + sizeKey);
+  const label   = document.querySelector(`[data-brand-label="${sizeKey}"]`);
+  if (!img || !wrapper) return;
+
+  if (label) label.textContent = selectedBrand;
+
+  if (!primaryUrl) {
+    img.onerror = null;
+    img.onload = null;
+    img.dataset.currentUrl = fallbackUrl || "";
+    img.removeAttribute("src");
+    img.classList.remove("hide", "loaded");
+    wrapper.classList.remove("loading", "no-img");
+    img.src = fallbackUrl;
+    img.onload = () => img.classList.add("loaded");
+    return;
+  }
+
+  if (img.dataset.currentUrl === primaryUrl && img.classList.contains("loaded")) return;
+
+  img.dataset.currentUrl = primaryUrl;
+  wrapper.classList.remove("no-img");
+  wrapper.classList.add("loading");
+  img.classList.add("hide");
+  img.classList.remove("loaded");
+
+  const preload = new Image();
+  preload.decoding = "async";
+  preload.referrerPolicy = "no-referrer";
+
+  let settled = false;
+
+  preload.onload = () => {
+    if (settled) return;
+    settled = true;
+    img.src = primaryUrl;
+    img.classList.remove("hide");
+    requestAnimationFrame(() => {
+      img.classList.add("loaded");
+      wrapper.classList.remove("loading", "no-img");
+    });
+  };
+
+  preload.onerror = () => {
+    if (settled) return;
+    settled = true;
+    console.warn("[Moseh Gas] S3 image failed → using SVG fallback:", primaryUrl);
+    img.src = fallbackUrl;
+    wrapper.classList.remove("loading");
+    if (!fallbackUrl) {
+      wrapper.classList.add("no-img");
+      img.classList.add("hide");
+      return;
+    }
+    img.classList.remove("hide");
+    img.onload = () => img.classList.add("loaded");
+    img.onerror = () => {
+      wrapper.classList.add("no-img");
+      img.classList.add("hide");
+    };
+  };
+
+  preload.src = primaryUrl;
+}
+
+function updateImages() {
+  const brandMap = BRAND_IMAGES[selectedBrand];
+  const fallbackMap = FALLBACK_IMAGES[selectedBrand];
+  SIZE_KEYS.forEach(sizeKey => {
+    const primary  = brandMap && brandMap[sizeKey] ? brandMap[sizeKey] : null;
+    const fallback = fallbackMap && fallbackMap[sizeKey] ? fallbackMap[sizeKey] : null;
+    setImageForSize(sizeKey, primary, fallback);
+  });
+}
+
+function preloadAllBrandImages() {
+  Object.values(BRAND_IMAGES).forEach(brandMap => {
+    if (!brandMap) return;
+    Object.values(brandMap).forEach(url => {
+      if (!url) return;
+      const im = new Image();
+      im.decoding = "async";
+      im.referrerPolicy = "no-referrer";
+      im.onerror = () => console.warn("[Moseh Gas] Preload failed (will fall back to SVG):", url);
+      im.src = url;
+    });
+  });
+}
+if ("requestIdleCallback" in window) {
+  requestIdleCallback(preloadAllBrandImages, { timeout: 3000 });
+} else {
+  window.addEventListener("load", () => setTimeout(preloadAllBrandImages, 1500));
+}
+
+const waLink = text => "https://wa.me/" + CFG.whatsapp + "?text=" + encodeURIComponent(text);
+
+$("#navWa").href  = waLink("Hi " + CFG.business + ", I need a gas refill delivered.");
+$("#fabWa").href  = waLink("Hi " + CFG.business + ", I need a gas refill delivered.");
+$("#barWa").href  = waLink("Hi " + CFG.business + ", I need a gas refill delivered.");
+$("#footWa").href = waLink("Hi " + CFG.business + ", I have a question about gas delivery.");
+
+$("#aixaOrder").href  = waLink("Hi " + CFG.business + ", I would like to place a gas order. My estate: ______ · Size: ______");
+$("#aixaBulk").href   = waLink("Hi " + CFG.business + ", I need a bulk LPG quote. Business: ______ · Monthly usage: ______ kg");
+$("#aixaHuman").href  = waLink("Hi " + CFG.business + ", I'd like to talk to a person about gas delivery.");
+
+$$(".js-order").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const size = btn.dataset.size;
+    const msg =
+      "GAS ORDER — " + CFG.business + "\n" +
+      "Size: " + size + "\n" +
+      "Brand: " + selectedBrand + "\n" +
+      "My estate: ______\n" +
+      "My phone: ______";
+    window.open(waLink(msg), "_blank");
+    toast("Opening WhatsApp…");
+  });
+});
+
+$("#quickForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const size   = $("#fSize").value;
+  const estate = $("#fEstate").value;
+  const phone  = $("#fPhone").value.trim();
+
+  if (!estate) { toast("Please select your estate"); $("#fEstate").focus(); return; }
+  if (phone.replace(/\D/g, "").length < 9) {
+    toast("Enter a valid phone number");
+    $("#fPhone").focus();
+    return;
+  }
+
+  const msg =
+    "GAS ORDER — " + CFG.business + "\n" +
+    "Size: " + size + "\n" +
+    "Brand: " + selectedBrand + "\n" +
+    "Estate: " + estate + "\n" +
+    "Phone: " + phone;
+
+  window.open(waLink(msg), "_blank");
+  toast("Opening WhatsApp…");
+});
+
+(function aixa(){
+  const launcher = $("#aixaLauncher");
+  const panel    = $("#aixaPanel");
+  const closeBtn = $("#aixaClose");
+  const input    = $("#aixaInput");
+  const sendBtn  = $("#aixaSend");
+  const seePrices = $("#aixaPrices");
+  if (!launcher || !panel) return;
+
+  $$(".aixa-launcher .aixa-img, .aixa-avatar img").forEach(img => {
+    img.addEventListener("error", () => {
+      const parent = img.closest(".aixa-launcher, .aixa-avatar");
+      if (parent) parent.classList.add("no-img");
+      console.warn("[Moseh Gas] Aixa avatar failed to load:", img.src);
+    });
+    if (img.complete && img.naturalWidth === 0) {
+      const parent = img.closest(".aixa-launcher, .aixa-avatar");
+      if (parent) parent.classList.add("no-img");
+    }
+  });
+
+  function openPanel() {
+    panel.classList.add("open");
+    launcher.setAttribute("aria-expanded", "true");
+    setTimeout(() => input && input.focus(), 300);
+  }
+  function closePanel() {
+    panel.classList.remove("open");
+    launcher.setAttribute("aria-expanded", "false");
+  }
+  function togglePanel() {
+    if (panel.classList.contains("open")) closePanel();
+    else openPanel();
+  }
+
+  launcher.addEventListener("click", togglePanel);
+  closeBtn.addEventListener("click", closePanel);
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && panel.classList.contains("open")) closePanel();
+  });
+
+  document.addEventListener("click", e => {
+    if (!panel.classList.contains("open")) return;
+    if (panel.contains(e.target) || launcher.contains(e.target)) return;
+    closePanel();
+  });
+
+  if (seePrices) {
+    seePrices.addEventListener("click", e => {
+      e.preventDefault();
+      closePanel();
+      const target = document.getElementById("prices");
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  function sendQuestion() {
+    const q = (input.value || "").trim();
+    if (!q) { input.focus(); return; }
+    const msg = "Hi " + CFG.business + ", " + q;
+    window.open(waLink(msg), "_blank");
+    toast("Opening WhatsApp…");
+    input.value = "";
+  }
+  sendBtn.addEventListener("click", sendQuestion);
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") { e.preventDefault(); sendQuestion(); }
+  });
+})();
+
+(function navSpy() {
+  const links = $$(".nav-link[data-nav]");
+  const sections = links.map(l => document.getElementById(l.dataset.nav)).filter(Boolean);
+  if (!("IntersectionObserver" in window) || !sections.length) return;
+  const setActive = id => links.forEach(l => l.classList.toggle("active", l.dataset.nav === id));
+  const io = new IntersectionObserver(entries => {
+    const visible = entries.filter(e => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    if (visible.length) setActive(visible[0].target.id);
+  }, { rootMargin: "-45% 0px -45% 0px", threshold: [0, .2, .5, 1] });
+  sections.forEach(s => io.observe(s));
+  links.forEach(l => l.addEventListener("click", () => setActive(l.dataset.nav)));
+})();
+
+(function reveal() {
+  if (!("IntersectionObserver" in window)) {
+    $$(".reveal").forEach(el => el.classList.add("in"));
+    return;
+  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+  $$(".reveal").forEach(el => io.observe(el));
+})();
+
+$("#year").textContent = new Date().getFullYear();
+$("#tillNumber").textContent = CFG.till;
+$$(".tb-btn.js-copy-till").forEach(b => {
+  b.innerHTML =
+    '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>' +
+    "Till: <b>" + CFG.till + '</b><span class="copy-tag">Copy</span>';
+});
+updatePrices();
+updateImages();
+
+(function preloadAixa(){
+  const im = new Image();
+  im.decoding = "async";
+  im.onerror = () => {
+    $$(".aixa-launcher, .aixa-avatar").forEach(el => el.classList.add("no-img"));
+    console.warn("[Moseh Gas] Aixa avatar could not be preloaded:", AIXA_AVATAR);
+  };
+  im.src = AIXA_AVATAR;
+})();
+</script>
+</body>
+</html>
