@@ -127,9 +127,42 @@
     text-shadow:0 2px 12px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5);
   }
 
+  /* HERO ACTION BUTTONS — enhanced */
+  .hero-actions{
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    margin:28px 0 6px;
+  }
+  .hero-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:15px 28px;border-radius:var(--r-full);
+    text-decoration:none;font-weight:900;font-size:16.5px;letter-spacing:-.2px;
+    transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;
+    position:relative;overflow:hidden;isolation:isolate;
+    box-shadow:0 12px 28px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.35);
+  }
+  .hero-btn::before{
+    content:"";position:absolute;top:0;left:-100%;width:55%;height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+    transform:skewX(-22deg);transition:left .7s ease;pointer-events:none;
+  }
+  .hero-btn:hover::before{left:140%}
+  .hero-btn:hover{transform:translateY(-3px);filter:brightness(1.05)}
+  .hero-btn:active{transform:scale(.97)}
+  .hero-btn-wa{
+    background:var(--grad-wa);color:#032416;
+    box-shadow:0 14px 32px rgba(37,211,102,.45), inset 0 1px 0 rgba(255,255,255,.55);
+  }
+  .hero-btn-wa:hover{box-shadow:0 18px 40px rgba(37,211,102,.55), inset 0 1px 0 rgba(255,255,255,.55)}
+  .hero-btn-call{
+    background:rgba(255,255,255,.14);color:#fff;
+    border:1.5px solid rgba(255,255,255,.5);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  }
+  .hero-btn-call:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.7)}
+
   .hero-stats{
     display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
-    margin-top:26px;max-width:520px;
+    margin-top:30px;max-width:520px;
   }
   .stat{
     background:rgba(255,255,255,.14);
@@ -152,6 +185,7 @@
     background:linear-gradient(180deg,#fff,#B9E7C9);
     -webkit-background-clip:text;background-clip:text;color:transparent;
     filter:drop-shadow(0 1px 2px rgba(0,0,0,.3));
+    font-variant-numeric:tabular-nums;
   }
   .stat span{
     display:block;
@@ -162,6 +196,7 @@
     font-weight:800;
     color:rgba(255,255,255,.9);
   }
+  .count-up{display:inline-block}
 
   /* ================= BUTTONS ================= */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:var(--r-full);font-weight:800;font-size:17px;letter-spacing:-.2px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;position:relative;overflow:hidden;isolation:isolate;transition:transform .18s ease, box-shadow .18s ease, filter .18s ease}
@@ -382,6 +417,14 @@
   /* ================= REVEAL ================= */
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
   .reveal.in{opacity:1;transform:none}
+
+  /* ================= HERO MOBILE ================= */
+  @media(max-width:600px){
+    .hero-actions{flex-direction:column;align-items:stretch}
+    .hero-btn{width:100%}
+    .hero-stats{gap:10px}
+  }
+
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important}
     .reveal{opacity:1;transform:none}
@@ -394,15 +437,17 @@
 <header class="site-head">
   <div class="topbar">
     <div class="wrap">
-      <a class="tb-item" href="tel:+254712345678">
+      <a class="tb-item" href="tel:+254713047798">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        0712 345 678
+        0713 047 798
       </a>
+
       <button class="tb-item tb-btn js-copy-till">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        Till: <b>5123456</b>
+        Till: <b>5130477</b>
         <span class="copy-tag">Copy</span>
       </button>
+
       <span class="tb-item">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         6:30 AM – 9:30 PM
@@ -415,7 +460,7 @@
       <a class="nav-link active" data-nav="prices" href="#prices">Gas &amp; Prices</a>
       <a class="nav-link" data-nav="order" href="#order">Quick Order</a>
       <a class="nav-link" data-nav="pay" href="#pay">Till &amp; Zones</a>
-      <a class="nav-link nav-wa" id="navWa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="nav-link nav-wa" id="navWa" href="https://wa.me/254713047798" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </nav>
 </header>
@@ -425,14 +470,47 @@
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="wrap">
+
     <h1>Moseh Gas — <span class="hl">15 Minute</span> Gas Delivery in Nyeri</h1>
+
     <p class="sub">Order on WhatsApp. Weighed at your door, paid via M-Pesa.</p>
 
-    <div class="hero-stats">
-      <div class="stat"><b>15 min</b><span>Avg. delivery</span></div>
-      <div class="stat"><b>4.9 / 5</b><span>Rating</span></div>
-      <div class="stat"><b>2,400+</b><span>Refills</span></div>
+    <!-- HERO ACTION BUTTONS -->
+    <div class="hero-actions">
+      <a class="hero-btn hero-btn-wa"
+         href="https://wa.me/254713047798?text=Hello%20Moseh%20Gas%2C%20I%20would%20like%20to%20order%20gas."
+         target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.52 3.48A11.8 11.8 0 0 0 12.06 0C5.5 0 .15 5.34.15 11.9c0 2.1.55 4.15 1.6 5.95L.05 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9a11.8 11.8 0 0 0-3.44-8.42ZM12.06 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.38a9.85 9.85 0 1 1 8.38 4.64Zm5.42-7.38c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+        </svg>
+        Order on WhatsApp
+      </a>
+
+      <a class="hero-btn hero-btn-call" href="tel:+254713047798">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        Call Us
+      </a>
     </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <b><span class="count-up" data-target="15">0</span> min</b>
+        <span>Avg. delivery</span>
+      </div>
+
+      <div class="stat">
+        <b><span class="count-up" data-target="4.9" data-decimals="1">0</span> / 5</b>
+        <span>Rating</span>
+      </div>
+
+      <div class="stat">
+        <b><span class="count-up" data-target="2400" data-suffix="+">0</span></b>
+        <span>Refills</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -520,9 +598,7 @@
 
     </div>
   </div>
-</section>
-
-<!-- ================= QUICK ORDER ================= -->
+  <!-- ================= QUICK ORDER ================= -->
 <section class="sec reveal" id="order" style="padding-top:0">
   <div class="wrap">
     <div class="panel">
@@ -577,7 +653,7 @@
 
       <div class="till-box">
         <div class="lbl"><span class="chip-dot"></span> Pay via M-Pesa · Buy Goods</div>
-        <div class="till-num" id="tillNumber">5123456</div>
+        <div class="till-num" id="tillNumber">5130477</div>
         <p>Moseh Gas · No extra charges</p>
         <button class="copy-btn js-copy-till">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
@@ -624,7 +700,7 @@
       <div class="foot-col">
         <h5>Contact</h5>
         <ul>
-          <li><a href="tel:+254712345678">Call 0712 345 678</a></li>
+          <li><a href="tel:+254713047798">Call 0713 047 798</a></li>
           <li><a id="footWa" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
           <li>6:30 AM – 9:30 PM Daily</li>
         </ul>
@@ -633,7 +709,7 @@
         <h5>Depot &amp; Payment</h5>
         <ul>
           <li><a href="https://maps.google.com/?q=Nyeri+Town+Kenya" target="_blank" rel="noopener">Depot on Google Maps</a></li>
-          <li>M-Pesa Till: <b>5123456</b></li>
+          <li>M-Pesa Till: <b>5130477</b></li>
           <li>Always check the safety seal before use.</li>
         </ul>
       </div>
@@ -732,8 +808,8 @@
    ========================================================= */
 const CFG = {
   business : "Moseh Gas",
-  whatsapp : "254712345678",
-  till     : "5123456",
+  whatsapp : "254713047798",
+  till     : "5130477",
 
   prices : { "6kg": 1080, "13kg": 2450, "50kg": 9500 },
 
@@ -1184,6 +1260,40 @@ $("#quickForm").addEventListener("submit", e => {
     });
   }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
   $$(".reveal").forEach(el => io.observe(el));
+})();
+
+/* ================= HERO NUMBER COUNTER ================= */
+(function heroCounters(){
+  const counters = document.querySelectorAll(".count-up");
+  if (!counters.length) return;
+
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  counters.forEach(counter => {
+    const target   = parseFloat(counter.dataset.target);
+    const decimals = parseInt(counter.dataset.decimals || 0, 10);
+    const suffix   = counter.dataset.suffix || "";
+    if (isNaN(target)) return;
+
+    if (reduce) {
+      counter.textContent = target.toFixed(decimals) + suffix;
+      return;
+    }
+
+    const duration = 1800;
+    let start = null;
+
+    function animate(now) {
+      if (start === null) start = now;
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = target * eased;
+      counter.textContent = value.toFixed(decimals) + suffix;
+      if (progress < 1) requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  });
 })();
 
 $("#year").textContent = new Date().getFullYear();
