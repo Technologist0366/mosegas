@@ -79,7 +79,7 @@
   .nav-link.nav-wa:hover{filter:brightness(1.06);transform:translateY(-1px)}
   @media(min-width:860px){.subnav-inner{justify-content:center}}
 
-  /* ================= HERO — IMAGE VISIBLE ================= */
+  /* ================= HERO ================= */
   .hero{position:relative;overflow:hidden;color:#fff;padding:38px 0 40px;isolation:isolate;min-height:340px;display:flex;align-items:center}
   .hero-bg{
     position:absolute;inset:0;z-index:0;
@@ -98,105 +98,21 @@
     background:radial-gradient(900px 500px at 10% 40%, rgba(0,0,0,.35), transparent 70%);
   }
   .hero .wrap{position:relative;z-index:2;max-width:1100px;width:100%}
-
-  .hero h1{
-    font-size:clamp(32px,6.4vw,52px);
-    line-height:1.04;
-    letter-spacing:-1.6px;
-    max-width:760px;
-    font-weight:900;
-    text-shadow:0 3px 28px rgba(0,0,0,.55), 0 1px 4px rgba(0,0,0,.4);
-  }
-  .hero h1 .hl{
-    background:linear-gradient(100deg,#FFE49B 0%,#FDBA74 25%,#FFD166 50%,#FFE49B 75%,#FDBA74 100%);
-    background-size:200% auto;
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-    position:relative;
-    animation:shine 4.5s linear infinite;
-    filter:drop-shadow(0 2px 8px rgba(249,115,22,.35));
-  }
+  .hero h1{font-size:clamp(32px,6.4vw,52px);line-height:1.04;letter-spacing:-1.6px;max-width:760px;font-weight:900;text-shadow:0 3px 28px rgba(0,0,0,.55), 0 1px 4px rgba(0,0,0,.4);}
+  .hero h1 .hl{background:linear-gradient(100deg,#FFE49B 0%,#FDBA74 25%,#FFD166 50%,#FFE49B 75%,#FDBA74 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;animation:shine 4.5s linear infinite;filter:drop-shadow(0 2px 8px rgba(249,115,22,.35));}
   @keyframes shine{0%{background-position:0% center}100%{background-position:200% center}}
+  .hero .sub{margin-top:14px;font-size:clamp(16px,2.2vw,19px);color:rgba(255,255,255,.96);max-width:580px;font-weight:600;line-height:1.5;text-shadow:0 2px 12px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5);}
 
-  .hero .sub{
-    margin-top:14px;
-    font-size:clamp(16px,2.2vw,19px);
-    color:rgba(255,255,255,.96);
-    max-width:580px;
-    font-weight:600;
-    line-height:1.5;
-    text-shadow:0 2px 12px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5);
-  }
-
-  /* HERO ACTION BUTTONS — enhanced */
-  .hero-actions{
-    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
-    margin:28px 0 6px;
-  }
-  .hero-btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:10px;
-    padding:15px 28px;border-radius:var(--r-full);
-    text-decoration:none;font-weight:900;font-size:16.5px;letter-spacing:-.2px;
-    transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;
-    position:relative;overflow:hidden;isolation:isolate;
-    box-shadow:0 12px 28px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.35);
-  }
-  .hero-btn::before{
-    content:"";position:absolute;top:0;left:-100%;width:55%;height:100%;
-    background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
-    transform:skewX(-22deg);transition:left .7s ease;pointer-events:none;
-  }
+  .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:28px 0 6px;}
+  .hero-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:var(--r-full);text-decoration:none;font-weight:900;font-size:16.5px;letter-spacing:-.2px;transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;position:relative;overflow:hidden;isolation:isolate;box-shadow:0 12px 28px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.35);}
+  .hero-btn::before{content:"";position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-22deg);transition:left .7s ease;pointer-events:none;}
   .hero-btn:hover::before{left:140%}
   .hero-btn:hover{transform:translateY(-3px);filter:brightness(1.05)}
   .hero-btn:active{transform:scale(.97)}
-  .hero-btn-wa{
-    background:var(--grad-wa);color:#032416;
-    box-shadow:0 14px 32px rgba(37,211,102,.45), inset 0 1px 0 rgba(255,255,255,.55);
-  }
+  .hero-btn-wa{background:var(--grad-wa);color:#032416;box-shadow:0 14px 32px rgba(37,211,102,.45), inset 0 1px 0 rgba(255,255,255,.55);}
   .hero-btn-wa:hover{box-shadow:0 18px 40px rgba(37,211,102,.55), inset 0 1px 0 rgba(255,255,255,.55)}
-  .hero-btn-call{
-    background:rgba(255,255,255,.14);color:#fff;
-    border:1.5px solid rgba(255,255,255,.5);
-    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-  }
+  .hero-btn-call{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
   .hero-btn-call:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.7)}
-
-  .hero-stats{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
-    margin-top:30px;max-width:520px;
-  }
-  .stat{
-    background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.3);
-    border-radius:14px;
-    padding:14px 10px;
-    text-align:center;
-    backdrop-filter:blur(16px) saturate(140%);
-    -webkit-backdrop-filter:blur(16px) saturate(140%);
-    transition:transform .2s, background .2s, border-color .2s;
-    box-shadow:0 8px 24px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.25);
-  }
-  .stat:hover{transform:translateY(-3px);background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.45)}
-  .stat b{
-    display:block;
-    font-size:clamp(18px,3vw,24px);
-    font-weight:900;
-    letter-spacing:-.7px;
-    line-height:1.1;
-    background:linear-gradient(180deg,#fff,#B9E7C9);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-    filter:drop-shadow(0 1px 2px rgba(0,0,0,.3));
-    font-variant-numeric:tabular-nums;
-  }
-  .stat span{
-    display:block;
-    margin-top:4px;
-    font-size:10.5px;
-    text-transform:uppercase;
-    letter-spacing:.9px;
-    font-weight:800;
-    color:rgba(255,255,255,.9);
-  }
-  .count-up{display:inline-block}
 
   /* ================= BUTTONS ================= */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:var(--r-full);font-weight:800;font-size:17px;letter-spacing:-.2px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;position:relative;overflow:hidden;isolation:isolate;transition:transform .18s ease, box-shadow .18s ease, filter .18s ease}
@@ -223,13 +139,7 @@
   .chip{flex:0 0 auto;position:relative;background:#fff;border:1.5px solid var(--line);color:var(--ink);border-radius:var(--r-full);padding:12px 20px 12px 34px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;transition:all .18s ease;white-space:nowrap;box-shadow:var(--sh-xs);letter-spacing:-.1px}
   .chip::before{content:"";position:absolute;left:14px;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:var(--chip-color, var(--g-500));box-shadow:0 0 0 2px rgba(0,0,0,.04);transition:box-shadow .18s, transform .18s}
   .chip:hover{border-color:var(--chip-color, var(--g-200));transform:translateY(-1px);box-shadow:0 4px 12px var(--chip-shadow, var(--sh-sm))}
-  .chip.active{
-    background:var(--chip-color, var(--g-500));
-    border-color:transparent;
-    color:#fff;
-    box-shadow:0 8px 22px var(--chip-glow, rgba(18,179,87,.35)), inset 0 1px 0 rgba(255,255,255,.3);
-    transform:translateY(-1px);
-  }
+  .chip.active{background:var(--chip-color, var(--g-500));border-color:transparent;color:#fff;box-shadow:0 8px 22px var(--chip-glow, rgba(18,179,87,.35)), inset 0 1px 0 rgba(255,255,255,.3);transform:translateY(-1px);}
   .chip.active::before{background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.3);transform:translateY(-50%) scale(1.1)}
 
   .chip[data-brand="K-Gas"]{--chip-color:#12B357;--chip-glow:rgba(18,179,87,.4);--chip-shadow:rgba(18,179,87,.18)}
@@ -240,49 +150,113 @@
   .chip[data-brand="Hashi"]{--chip-color:#7C3AED;--chip-glow:rgba(124,58,237,.4);--chip-shadow:rgba(124,58,237,.18)}
   .chip[data-brand="Universal Exchange"]{--chip-color:#0891B2;--chip-glow:rgba(8,145,178,.4);--chip-shadow:rgba(8,145,178,.18)}
 
-  /* ================= PRODUCT CARDS ================= */
+  /* ================= ENHANCED PRODUCT CARDS ================= */
   .grid{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
-  @media(min-width:860px){.grid{grid-template-columns:repeat(4,1fr);gap:18px}}
-  .card{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:14px 14px 16px;display:flex;flex-direction:column;gap:7px;position:relative;transition:transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s ease, border-color .25s ease;box-shadow:var(--sh-sm)}
-  .card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(160deg,rgba(18,179,87,.06),transparent 42%);opacity:0;transition:opacity .25s;z-index:0}
-  .card:hover{transform:translateY(-6px);border-color:transparent;box-shadow:0 0 0 1.5px var(--brand-ring, rgba(18,179,87,.35)), 0 22px 48px rgba(5,59,34,.13), 0 4px 12px rgba(5,59,34,.05)}
-  .card:hover::before{opacity:1}
-  .card > *{position:relative;z-index:1}
+  @media(min-width:860px){.grid{grid-template-columns:repeat(4,1fr);gap:20px}}
+  
+  .card{
+    background:var(--card);
+    border:1.5px solid var(--line);
+    border-radius:var(--r-xl);
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    transition:transform .3s cubic-bezier(.2,.7,.3,1), box-shadow .3s ease, border-color .3s ease;
+    box-shadow:var(--sh-sm);
+  }
+  .card:hover{
+    transform:translateY(-8px);
+    border-color:transparent;
+    box-shadow:0 0 0 2px var(--brand-ring, rgba(18,179,87,.35)), 0 24px 48px rgba(5,59,34,.15);
+  }
 
-  .card .tag{position:absolute;top:-12px;right:12px;z-index:3;background:var(--grad-orange);color:#fff;font-size:10.5px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;padding:5px 11px;border-radius:var(--r-full);box-shadow:0 6px 16px rgba(249,115,22,.36), inset 0 1px 0 rgba(255,255,255,.3)}
+  .card .tag{
+    position:absolute;top:-12px;right:12px;z-index:3;
+    background:var(--grad-orange);color:#fff;font-size:11px;font-weight:900;
+    letter-spacing:.6px;text-transform:uppercase;padding:6px 12px;
+    border-radius:var(--r-full);
+    box-shadow:0 6px 16px rgba(249,115,22,.36), inset 0 1px 0 rgba(255,255,255,.3);
+  }
 
-  .card-img{position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;
-    background:radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.9), transparent 55%),linear-gradient(160deg,var(--g-50),var(--g-100));
-    border:1px solid var(--line);margin-bottom:2px;isolation:isolate}
-  .card-img::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60% 55% at 50% 42%, var(--brand-glow, rgba(18,179,87,.14)), transparent 72%);opacity:.9}
-  .card-img::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 55%,rgba(5,59,34,.10) 100%);z-index:1}
-  .product-img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:0;opacity:0;transition:opacity .45s ease, transform .5s ease;transform:scale(1.03)}
+  /* LARGER, MORE VISIBLE IMAGES */
+  .card-img{
+    position:relative;
+    aspect-ratio: 1 / 1;
+    border-radius:var(--r-lg);
+    overflow:hidden;
+    background: #fff;
+    border:1px solid var(--line);
+    margin-bottom:12px;
+    isolation:isolate;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-img::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background:radial-gradient(60% 55% at 50% 42%, var(--brand-glow, rgba(18,179,87,.14)), transparent 72%);
+    opacity:.9;
+  }
+  
+  .product-img{
+    width:100%;
+    height:100%;
+    object-fit:contain; /* Shows the whole cylinder without cropping */
+    display:block;
+    position:relative;
+    z-index:0;
+    opacity:0;
+    transition:opacity .5s ease, transform .5s ease;
+    transform:scale(0.95);
+  }
   .product-img.loaded{opacity:1;transform:scale(1)}
-  .card:hover .product-img.loaded{transform:scale(1.07)}
+  .card:hover .product-img.loaded{transform:scale(1.08)} /* Pop out effect on hover */
   .product-img.hide{display:none}
 
-  .img-fallback{position:absolute;inset:0;z-index:0;display:grid;place-items:center;background:radial-gradient(120% 120% at 30% 20%, rgba(255,255,255,.55), transparent 60%),linear-gradient(150deg,var(--g-100),var(--g-200));color:var(--g-700);opacity:0;transition:opacity .3s ease;padding:14%}
+  .img-fallback{
+    position:absolute;inset:0;z-index:0;display:grid;place-items:center;
+    background:radial-gradient(120% 120% at 30% 20%, rgba(255,255,255,.55), transparent 60%),linear-gradient(150deg,var(--g-100),var(--g-200));
+    color:var(--g-700);opacity:0;transition:opacity .3s ease;padding:14%;
+  }
   .img-fallback svg{width:100%;height:100%;display:block;filter:drop-shadow(0 8px 14px rgba(5,59,34,.18))}
   .card-img.no-img .img-fallback{opacity:1}
 
-  .img-brand{position:absolute;top:9px;left:9px;z-index:2;background:rgba(255,255,255,.95);color:var(--g-700);font-size:10px;font-weight:900;padding:4px 10px;border-radius:var(--r-full);letter-spacing:.3px;box-shadow:0 2px 8px rgba(0,0,0,.10);backdrop-filter:blur(4px);transition:opacity .25s;display:inline-flex;align-items:center;gap:5px}
+  .img-brand{
+    position:absolute;top:10px;left:10px;z-index:2;
+    background:rgba(255,255,255,.95);color:var(--g-700);font-size:11px;
+    font-weight:900;padding:4px 10px;border-radius:var(--r-full);
+    letter-spacing:.3px;box-shadow:0 2px 8px rgba(0,0,0,.10);
+    backdrop-filter:blur(4px);transition:opacity .25s;
+    display:inline-flex;align-items:center;gap:6px;
+  }
   .img-brand::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brand-dot, var(--g-500));box-shadow:0 0 0 2px rgba(18,179,87,.15)}
 
-  .card-img.loading::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.65) 50%,transparent 70%);background-size:200% 100%;animation:shimmer 1.2s infinite}
-  @keyframes shimmer{0%{background-position:180% 0}100%{background-position:-80% 0}}
+  .card h3{font-size:17px;letter-spacing:-.4px;font-weight:900;color:var(--ink);margin-top:4px;text-align:center;}
+  .card .desc{font-size:13px;color:var(--muted);flex:1;line-height:1.45;text-align:center;margin-bottom:8px;}
 
-  .card h3{font-size:16.5px;letter-spacing:-.4px;font-weight:800;color:var(--ink);margin-top:2px}
-  .card .desc{font-size:12.5px;color:var(--muted);flex:1;line-height:1.45}
+  .price{
+    font-size:22px;font-weight:900;color:var(--g-700);letter-spacing:-.8px;
+    line-height:1.15;display:flex;flex-direction:column;gap:2px;align-items:center;
+    background:linear-gradient(135deg,var(--g-50),#fff);border:1px solid var(--g-200);
+    border-radius:12px;padding:10px;box-shadow:var(--sh-xs);margin-bottom:10px;
+  }
+  .price small{display:block;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:0;line-height:1.3;}
 
-  .price{font-size:20px;font-weight:900;color:var(--g-700);letter-spacing:-.8px;margin-top:6px;line-height:1.15;display:inline-flex;flex-direction:column;gap:3px;align-self:flex-start;background:linear-gradient(135deg,var(--g-50),#fff);border:1px solid var(--g-200);border-radius:12px;padding:7px 11px;box-shadow:var(--sh-xs)}
-  .price small{display:block;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:0;line-height:1.3;margin-top:0}
-
-  .card .mini{margin-top:10px;background:var(--grad-green-btn);color:#fff;border:0;border-radius:12px;padding:12px;font-weight:800;font-size:14.5px;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;justify-content:center;gap:7px;transition:filter .15s, transform .15s, box-shadow .15s, gap .2s;box-shadow:0 8px 18px rgba(11,122,59,.24), inset 0 1px 0 rgba(255,255,255,.22);position:relative;overflow:hidden}
-  .card .mini svg{transition:transform .2s ease}
-  .card:hover .mini svg{transform:translateX(3px)}
-  .card .mini::before{content:"";position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transform:skewX(-22deg);transition:left .6s ease}
-  .card:hover .mini::before{left:140%}
-  .card .mini:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .card .mini{
+    background:var(--grad-green-btn);color:#fff;border:0;border-radius:12px;
+    padding:14px;font-weight:800;font-size:15px;cursor:pointer;font-family:inherit;
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    transition:filter .15s, transform .15s, box-shadow .15s;
+    box-shadow:0 8px 18px rgba(11,122,59,.24), inset 0 1px 0 rgba(255,255,255,.22);
+    width: 100%;
+  }
+  .card .mini:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 12px 24px rgba(11,122,59,.3);}
   .card .mini:active{transform:scale(.97)}
 
   /* ================= QUICK ORDER ================= */
@@ -422,7 +396,6 @@
   @media(max-width:600px){
     .hero-actions{flex-direction:column;align-items:stretch}
     .hero-btn{width:100%}
-    .hero-stats{gap:10px}
   }
 
   @media (prefers-reduced-motion:reduce){
@@ -470,32 +443,20 @@
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="wrap">
-
     <h1>Moseh Gas — <span class="hl">15 Minute</span> Gas Delivery in Nyeri</h1>
-
     <p class="sub">Order on WhatsApp. Weighed at your door, paid via M-Pesa.</p>
 
-    <!-- HERO ACTION BUTTONS -->
     <div class="hero-actions">
-      <a class="hero-btn hero-btn-wa"
-         href="https://wa.me/254713047798?text=Hello%20Moseh%20Gas%2C%20I%20would%20like%20to%20order%20gas."
-         target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20.52 3.48A11.8 11.8 0 0 0 12.06 0C5.5 0 .15 5.34.15 11.9c0 2.1.55 4.15 1.6 5.95L.05 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9a11.8 11.8 0 0 0-3.44-8.42ZM12.06 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.38a9.85 9.85 0 1 1 8.38 4.64Zm5.42-7.38c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
-        </svg>
+      <a class="hero-btn hero-btn-wa" href="https://wa.me/254713047798?text=Hello%20Moseh%20Gas%2C%20I%20would%20like%20to%20order%20gas." target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.8 11.8 0 0 0 12.06 0C5.5 0 .15 5.34.15 11.9c0 2.1.55 4.15 1.6 5.95L.05 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9a11.8 11.8 0 0 0-3.44-8.42ZM12.06 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.38a9.85 9.85 0 1 1 8.38 4.64Zm5.42-7.38c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
         Order on WhatsApp
       </a>
 
       <a class="hero-btn hero-btn-call" href="tel:+254713047798">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         Call Us
       </a>
     </div>
-
-
-
   </div>
 </section>
 
@@ -503,9 +464,7 @@
 <section class="sec reveal" id="prices">
   <div class="wrap">
     <div class="sec-head">
-    
       <h2>Select Your Gas Cylinder</h2>
-      
     </div>
 
     <div class="brand-bar" id="brandBar">
@@ -531,8 +490,8 @@
         <p class="desc">1–2 people</p>
         <div class="price" data-price-for="6kg">KES 1,080<small>Weighed at your door</small></div>
         <button class="mini js-order" data-size="6kg Refill">
-          Order
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          Order Now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
       </article>
 
@@ -546,8 +505,8 @@
         <p class="desc">3–6 people</p>
         <div class="price" data-price-for="13kg">KES 2,450<small>Weighed at your door</small></div>
         <button class="mini js-order" data-size="13kg Refill">
-          Order
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          Order Now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
       </article>
 
@@ -561,8 +520,8 @@
         <p class="desc">Hotels &amp; business</p>
         <div class="price" data-price-for="50kg">KES 9,500<small>Bulk pricing available</small></div>
         <button class="mini js-order" data-size="50kg Commercial">
-          Order
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          Order Now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
       </article>
 
@@ -577,13 +536,15 @@
         <div class="price" data-price-for="accessories">From KES 650<small>Genuine EPRA parts</small></div>
         <button class="mini js-order" data-size="Cylinder / Accessories">
           Enquire
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
       </article>
 
     </div>
   </div>
-  <!-- ================= QUICK ORDER ================= -->
+</section>
+
+<!-- ================= QUICK ORDER ================= -->
 <section class="sec reveal" id="order" style="padding-top:0">
   <div class="wrap">
     <div class="panel">
@@ -635,7 +596,6 @@
 <section class="sec reveal" id="pay" style="padding-top:0">
   <div class="wrap">
     <div class="info-grid">
-
       <div class="till-box">
         <div class="lbl"><span class="chip-dot"></span> Pay via M-Pesa · Buy Goods</div>
         <div class="till-num" id="tillNumber">5130477</div>
@@ -654,7 +614,6 @@
         <li class="zone"><b>Ruring'u</b> <em>15–20 mins</em></li>
         <li class="zone bulk-row"><b>Karatina · Othaya · Mweiga</b> <em class="bulk">Scheduled</em></li>
       </ul>
-
     </div>
   </div>
 </section>
@@ -663,18 +622,9 @@
 <footer>
   <div class="wrap">
     <div class="foot-badges">
-      <span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        EPRA Licensed
-      </span>
-      <span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M3 21h18"/><path d="M7 7h10"/><path d="M12 7l-3 5h6l-3 5"/></svg>
-        Digital Scale Verified
-      </span>
-      <span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        Free Delivery
-      </span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> EPRA Licensed</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M3 21h18"/><path d="M7 7h10"/><path d="M12 7l-3 5h6l-3 5"/></svg> Digital Scale Verified</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Free Delivery</span>
     </div>
 
     <div class="foot-grid">
@@ -861,45 +811,45 @@ function svgAccessories(bg1, bg2, label) {
 
 const FALLBACK_IMAGES = {
   "K-Gas": {
-    "6kg":         svgCylinder("#0B7A3B", "#053B22", "K"),
-    "13kg":        svgCylinder("#0B7A3B", "#053B22", "K"),
-    "50kg":        svgCylinder("#0B7A3B", "#053B22", "K"),
+    "6kg": svgCylinder("#0B7A3B", "#053B22", "K"),
+    "13kg": svgCylinder("#0B7A3B", "#053B22", "K"),
+    "50kg": svgCylinder("#0B7A3B", "#053B22", "K"),
     "accessories": svgAccessories("#0B7A3B", "#053B22", "K-GAS")
   },
   "ProGas": {
-    "6kg":         svgCylinder("#EA580C", "#9A3412", "P"),
-    "13kg":        svgCylinder("#EA580C", "#9A3412", "P"),
-    "50kg":        svgCylinder("#EA580C", "#9A3412", "P"),
+    "6kg": svgCylinder("#EA580C", "#9A3412", "P"),
+    "13kg": svgCylinder("#EA580C", "#9A3412", "P"),
+    "50kg": svgCylinder("#EA580C", "#9A3412", "P"),
     "accessories": svgAccessories("#EA580C", "#9A3412", "PROGAS")
   },
   "TotalEnergies": {
-    "6kg":         svgCylinder("#DC2626", "#7F1D1D", "T"),
-    "13kg":        svgCylinder("#DC2626", "#7F1D1D", "T"),
-    "50kg":        svgCylinder("#DC2626", "#7F1D1D", "T"),
+    "6kg": svgCylinder("#DC2626", "#7F1D1D", "T"),
+    "13kg": svgCylinder("#DC2626", "#7F1D1D", "T"),
+    "50kg": svgCylinder("#DC2626", "#7F1D1D", "T"),
     "accessories": svgAccessories("#DC2626", "#7F1D1D", "TOTAL")
   },
   "AfriGas": {
-    "6kg":         svgCylinder("#2563EB", "#1E3A8A", "A"),
-    "13kg":        svgCylinder("#2563EB", "#1E3A8A", "A"),
-    "50kg":        svgCylinder("#2563EB", "#1E3A8A", "A"),
+    "6kg": svgCylinder("#2563EB", "#1E3A8A", "A"),
+    "13kg": svgCylinder("#2563EB", "#1E3A8A", "A"),
+    "50kg": svgCylinder("#2563EB", "#1E3A8A", "A"),
     "accessories": svgAccessories("#2563EB", "#1E3A8A", "AFRIGAS")
   },
   "Rubis": {
-    "6kg":         svgCylinder("#B91C1C", "#450A0A", "R"),
-    "13kg":        svgCylinder("#B91C1C", "#450A0A", "R"),
-    "50kg":        svgCylinder("#B91C1C", "#450A0A", "R"),
+    "6kg": svgCylinder("#B91C1C", "#450A0A", "R"),
+    "13kg": svgCylinder("#B91C1C", "#450A0A", "R"),
+    "50kg": svgCylinder("#B91C1C", "#450A0A", "R"),
     "accessories": svgAccessories("#B91C1C", "#450A0A", "RUBIS")
   },
   "Hashi": {
-    "6kg":         svgCylinder("#7C3AED", "#4C1D95", "H"),
-    "13kg":        svgCylinder("#7C3AED", "#4C1D95", "H"),
-    "50kg":        svgCylinder("#7C3AED", "#4C1D95", "H"),
+    "6kg": svgCylinder("#7C3AED", "#4C1D95", "H"),
+    "13kg": svgCylinder("#7C3AED", "#4C1D95", "H"),
+    "50kg": svgCylinder("#7C3AED", "#4C1D95", "H"),
     "accessories": svgAccessories("#7C3AED", "#4C1D95", "HASHI")
   },
   "Universal Exchange": {
-    "6kg":         svgCylinder("#0891B2", "#164E63", "U"),
-    "13kg":        svgCylinder("#0891B2", "#164E63", "U"),
-    "50kg":        svgCylinder("#0891B2", "#164E63", "U"),
+    "6kg": svgCylinder("#0891B2", "#164E63", "U"),
+    "13kg": svgCylinder("#0891B2", "#164E63", "U"),
+    "50kg": svgCylinder("#0891B2", "#164E63", "U"),
     "accessories": svgAccessories("#0891B2", "#164E63", "UNIVERSAL")
   }
 };
@@ -912,7 +862,6 @@ const BRAND_IMAGES = {
     "accessories": null
   },
   "Universal Exchange": null,
-
   "ProGas": {
     "6kg"        : S3_BASE + "pro/6kg%20Refill.jpg",
     "13kg"       : S3_BASE + "pro/13kg%20Refill.jpg",
@@ -1245,40 +1194,6 @@ $("#quickForm").addEventListener("submit", e => {
     });
   }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
   $$(".reveal").forEach(el => io.observe(el));
-})();
-
-/* ================= HERO NUMBER COUNTER ================= */
-(function heroCounters(){
-  const counters = document.querySelectorAll(".count-up");
-  if (!counters.length) return;
-
-  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  counters.forEach(counter => {
-    const target   = parseFloat(counter.dataset.target);
-    const decimals = parseInt(counter.dataset.decimals || 0, 10);
-    const suffix   = counter.dataset.suffix || "";
-    if (isNaN(target)) return;
-
-    if (reduce) {
-      counter.textContent = target.toFixed(decimals) + suffix;
-      return;
-    }
-
-    const duration = 1800;
-    let start = null;
-
-    function animate(now) {
-      if (start === null) start = now;
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const value = target * eased;
-      counter.textContent = value.toFixed(decimals) + suffix;
-      if (progress < 1) requestAnimationFrame(animate);
-    }
-
-    requestAnimationFrame(animate);
-  });
 })();
 
 $("#year").textContent = new Date().getFullYear();
